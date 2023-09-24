@@ -28,7 +28,7 @@ export const CampoContato = styled.textarea`
   height: 30px;
   margin-left: 8px;
   text-align: center;
-  border: 2px solid black;
+  border: none;
   background-color: transparent;
 
   @media (max-width: 820px) {
