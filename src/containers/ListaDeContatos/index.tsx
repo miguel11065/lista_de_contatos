@@ -11,10 +11,10 @@ const ListaDeContatos = () => {
         {itens.map((c) => (
           <li key={c.nome}>
             <Contato
+              id={c.id}
               nome={c.nome}
               email={c.email}
               numero={c.numero}
-              id={c.id}
             />
           </li>
         ))}

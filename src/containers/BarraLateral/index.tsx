@@ -1,7 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import * as S from './styles'
-import Contato from '../../models/Contato'
 import { cadastrar } from '../../store/reducers/contatos'
 
 const BarraLateral = () => {
@@ -12,9 +11,14 @@ const BarraLateral = () => {
 
   const cadastrarContato = (evento: FormEvent) => {
     evento.preventDefault()
-    const contatoParaAdicionar = new Contato(nome, email, numero, 9)
 
-    dispatch(cadastrar(contatoParaAdicionar))
+    dispatch(
+      cadastrar({
+        nome,
+        email,
+        numero
+      })
+    )
   }
 
   return (
